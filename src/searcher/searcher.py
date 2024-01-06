@@ -7,8 +7,8 @@
 import json,requests,copy
 import numpy as np
 from loguru import logger
-from src.searcher.vec_searcher.vec_searcher import VecSearcher
-from src.models.vec_model.vec_model import VectorizeModel
+from  searcher.vec_searcher.vec_searcher import VecSearcher
+from  models.vec_model.vec_model import VectorizeModel
 
 class Searcher:
     def __init__(self, model_path, vec_search_path):
@@ -43,7 +43,7 @@ class Searcher:
         return rank_result
 
 if __name__ == "__main__":
-    VEC_MODEL_PATH = "C:/work/tool/huggingface/models/simcse-chinese-roberta-wwm-ext"
+    VEC_MODEL_PATH = "K:\model\simcse-chinese-roberta-wwm-ext"
     VEC_INDEX_DATA = "vec_index_test2023121201"
     searcher = Searcher(VEC_MODEL_PATH, VEC_INDEX_DATA)
     q = "什么人不能吃花生"

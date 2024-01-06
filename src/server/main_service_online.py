@@ -14,15 +14,15 @@ from tornado.options import options, define
 from multiprocessing import Process
 
 
-from src.searcher.searcher import Searcher
-from src.models.vec_model.vec_model import VectorizeModel
-from src.models.llm.llm_model import LlmModel
-from src.dm.dialogue_manager import DialogueManager
+from  searcher.searcher import Searcher
+from  models.vec_model.vec_model import VectorizeModel
+from  models.llm.llm_model import LlmModel
+from  dm.dialogue_manager import DialogueManager
 
-from src.server.handlers.search_handler import SearcherHandler,StartSearcherHandler
-# from src.server.handlers.vec_model_handler import VecModelHandler,StartVecModelHandler
-from src.server.handlers.llm_handler import LlmModel,StartLlmHandler
-from src.server.handlers.dialogue_manager_handler import DialogueManagerHandler, StartDialogueManagerHandler
+from  server.handlers.search_handler import SearcherHandler,StartSearcherHandler
+# from  server.handlers.vec_model_handler import VecModelHandler,StartVecModelHandler
+from  server.handlers.llm_handler import LlmModel,StartLlmHandler
+from  server.handlers.dialogue_manager_handler import DialogueManagerHandler, StartDialogueManagerHandler
 
 def launch_service(config, model_mode):
     if model_mode == "llm_model":
@@ -56,11 +56,11 @@ def launch_service(config, model_mode):
 if __name__ == "__main__":
     config = {"process_searcher":{"port":9090, 
                                       "url_suffix":"/searcher", 
-                                      "VEC_MODEL_PATH":"C:/work/tool/huggingface/models/simcse-chinese-roberta-wwm-ext",
+                                      "VEC_MODEL_PATH":"K:\model\simcse-chinese-roberta-wwm-ext",
                                       "VEC_INDEX_DATA":"vec_index_test2023121301_20w"},
              "process_vec_model":{"port":9091, 
                                       "url_suffix":"/vec_model", 
-                                      "VEC_MODEL_PATH":"C:/work/tool/huggingface/models/simcse-chinese-roberta-wwm-ext"},
+                                      "VEC_MODEL_PATH":"K:\model\simcse-chinese-roberta-wwm-ext"},
              "process_llm_model":{"port":9092, 
                                       "url_suffix":"/llm_model", 
                                       "model_path":"C:\\work\\tool\\chatglm2-6b",

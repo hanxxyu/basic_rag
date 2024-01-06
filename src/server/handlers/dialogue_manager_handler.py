@@ -13,7 +13,7 @@ from tornado.web import RequestHandler, Application
 from tornado.httpserver import HTTPServer
 from tornado.options import options, define
 
-from src.dm.dialogue_manager import DialogueManager
+from  dm.dialogue_manager import DialogueManager
 
 class DialogueManagerHandler(RequestHandler):
     def initialize(self, dialogue_manager:DialogueManager):

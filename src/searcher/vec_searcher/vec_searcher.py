@@ -1,12 +1,12 @@
 import os, json
 from loguru import logger
-from src.searcher.vec_searcher.vec_index import VecIndex
+from searcher.vec_searcher.vec_index import VecIndex
 
 class VecSearcher:
     def __init__(self):
         self.invert_index = VecIndex() # 检索倒排，使用的是索引是VecIndex
         self.forward_index = [] # 检索正排，实质上只是个list，通过ID获取对应的内容
-        self.INDEX_FOLDER_PATH_TEMPLATE = "data/index/{}"
+        self.INDEX_FOLDER_PATH_TEMPLATE = r"C:\Users\Seon\Documents\GitHub\basic_rag\data\{}"
 
     def build(self, index_dim, index_name):
         self.index_name = index_name

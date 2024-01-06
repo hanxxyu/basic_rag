@@ -13,7 +13,7 @@ from tornado.web import RequestHandler, Application
 from tornado.httpserver import HTTPServer
 from tornado.options import options, define
 
-from src.models.llm.llm_model import LlmModel
+from  models.llm.llm_model import LlmModel
 
 class LlmHandler(RequestHandler):
     
