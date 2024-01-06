@@ -13,7 +13,7 @@ from tornado.web import RequestHandler, Application
 from tornado.httpserver import HTTPServer
 from tornado.options import options, define
 
-from src.searcher.searcher import Searcher
+from  searcher.searcher import Searcher
 
 class SearcherHandler(RequestHandler):
     

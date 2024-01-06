@@ -5,7 +5,7 @@ from loguru import logger
 
 from transformers import BertTokenizer
 
-from src.models.vec_model.simcse_model import SimcseModel
+from models.vec_model.simcse_model import SimcseModel
 
 class VectorizeModel:
     def __init__(self, ptm_model_path, device = "cpu") -> None:
@@ -43,7 +43,7 @@ class VectorizeModel:
 if __name__ == "__main__":
     import time,random
     from tqdm import tqdm
-    vec_model = VectorizeModel('C:/work/tool/huggingface/models/simcse-chinese-roberta-wwm-ext')
+    vec_model = VectorizeModel('K:\model\simcse-chinese-roberta-wwm-ext')
     print(vec_model.predict_vec("什么人不能吃花生"))
     # vec_model.predict_vec("你好啊")
     # vec_model.predict_vec("你好啊")
